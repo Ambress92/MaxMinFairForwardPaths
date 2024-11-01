@@ -6,7 +6,8 @@ A toy example showcase the Maxmin-Fair Forward Path method on a simple DAG, retu
 The folder src, contains the main functions and utilities.
 The experiments can be run from the Jupyter Notebooks.
 
-To run the baselines the following repositories should be downloaded: 
+To run the baselines the following repositories should be downloaded:
+
 https://github.com/tchond/kspwlo/tree/master
 https://github.com/AngelZihan/Diversified-Top-k-Route-Planning-in-Road-Network
 
