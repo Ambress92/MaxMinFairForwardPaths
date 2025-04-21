@@ -1,0 +1,3 @@
+igraph-0.11.4 texttable-1.7.0
+graph-tool
+networkx
