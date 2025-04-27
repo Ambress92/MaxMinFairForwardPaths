@@ -11,7 +11,7 @@ from src import utils as ut
 
 def main():
     parser = argparse.ArgumentParser(description="Run LP solver and sample fair FPs on a DAG.")
-    parser.add_argument('--graph', type=str, required=True, help='Path to the input graph file (pickled)')
+    parser.add_argument('--graph', type=str, required=True, help='Path to the input graph file (pickled, Networkx DiGraph)')
     parser.add_argument('--orig_node', type=int, required=True, help='Origin node')
     parser.add_argument('--dest_node', type=int, required=True, help='Destination node')
     parser.add_argument('--weight', type=str, default='length', help='Weight attribute in the graph (default: length)')

@@ -8,9 +8,9 @@
 
 This repository contains the code to extracts the DAG of forward paths from a source to a target node of a graph, to obtain the Maxmin-fair distribution over the forward paths and to sample paths from it.
 
-## Main content
+## Content
 
-* ***MMFP.py***: main end to end script to run our method. It creates the DAG of forward paths, the Maxmin-fair distribution and to sample paths from it.
+* *MMFP.py*: main end to end script to run our method. It creates the DAG of forward paths, the Maxmin-fair distribution and to sample paths from it.
 
 * **src**: folder containg the main functions in *utils.py*
 
@@ -19,14 +19,14 @@ This repository contains the code to extracts the DAG of forward paths from a so
 
 ## Requirements
 
-Our code runs in Python 3 and uses the Linear Programming solver Gurobi, more specifically:
+Our code runs in Python 3 and uses the Linear Programming solver Gurobi, specifically:
 
 ``` 
 Python 3.11.5
 gurobipy 12.0.1
 ```
 
-for more details see the *requirements.txt* file.
+Additional details are contained in the *requirements.txt* file.
 
 
 ## Running our method

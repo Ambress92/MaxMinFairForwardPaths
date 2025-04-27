@@ -1,0 +1,27 @@
+Function,Dataset,Execution Time (s)
+dag_new_function,"Buenos Aires, Argentina",0.923725962638855
+dag_new_function,"Essaouira, Morocco",0.07055336369408498
+dag_new_function,"Florence, Italy",0.3663964404000176
+dag_new_function,"Kyoto, Japan",2.6807175119717916
+dag_new_function,"Piedmont, California, USA",0.027411360210842506
+get_dag_wrapper,"Buenos Aires, Argentina",0.57
+get_dag_wrapper,"Essaouira, Morocco",0.05
+get_dag_wrapper,"Florence, Italy",0.27
+get_dag_wrapper,Florida,14.061427
+get_dag_wrapper,"Kyoto, Japan",2.18
+get_dag_wrapper,"Piedmont, California, USA",0.02
+get_dag_wrapper,West USA (Q1),67.0
+sample_paths,"Buenos Aires, Argentina",0.011733730634053486
+sample_paths,"Essaouira, Morocco",0.004513669013977
+sample_paths,"Florence, Italy",0.01035455862681067
+sample_paths,Florida,0.13857264518737786
+sample_paths,"Kyoto, Japan",0.016054511070251413
+sample_paths,"Piedmont, California, USA",0.00231571992238358
+sample_paths,West USA (Q1),0.113588
+solve_and_compute,"Buenos Aires, Argentina",3.57
+solve_and_compute,"Essaouira, Morocco",0.43
+solve_and_compute,"Florence, Italy",0.35
+solve_and_compute,Florida,217.761427
+solve_and_compute,"Kyoto, Japan",10.48
+solve_and_compute,"Piedmont, California, USA",0.25
+solve_and_compute,West USA (Q1),82.80000000000001

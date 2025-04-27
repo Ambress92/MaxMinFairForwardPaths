@@ -1,0 +1,27 @@
+Function,Dataset,Peak memory usage (MB)
+dag_new_function,"Buenos Aires, Argentina",27.897287591298422
+dag_new_function,"Essaouira, Morocco",2.3173561096191406
+dag_new_function,"Florence, Italy",10.500829569498698
+dag_new_function,"Kyoto, Japan",81.22169313430786
+dag_new_function,"Piedmont, California, USA",2.683776315053304
+get_dag_wrapper,"Buenos Aires, Argentina",35.952581596374515
+get_dag_wrapper,"Essaouira, Morocco",2.921588961283366
+get_dag_wrapper,"Florence, Italy",13.53463077545166
+get_dag_wrapper,Florida,1811.1387613841466
+get_dag_wrapper,"Kyoto, Japan",108.53834314346314
+get_dag_wrapper,"Piedmont, California, USA",2.1175058682759604
+get_dag_wrapper,West USA (Q1),9726.416501045227
+sample_paths,"Buenos Aires, Argentina",0.08218968709309893
+sample_paths,"Essaouira, Morocco",0.036800988515218076
+sample_paths,"Florence, Italy",0.07189165751139319
+sample_paths,Florida,0.8654637336730957
+sample_paths,"Kyoto, Japan",0.10874757766723629
+sample_paths,"Piedmont, California, USA",0.0235176086425781
+sample_paths,West USA (Q1),1.2047260284423829
+solve_and_compute,"Buenos Aires, Argentina",3.3221018666666664
+solve_and_compute,"Essaouira, Morocco",1.5397610666666668
+solve_and_compute,"Florence, Italy",1.5665562666666666
+solve_and_compute,Florida,24.78039733333333
+solve_and_compute,"Kyoto, Japan",4.786243733333333
+solve_and_compute,"Piedmont, California, USA",0.8014165333333333
+solve_and_compute,West USA (Q1),17.890096
