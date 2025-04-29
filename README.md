@@ -31,9 +31,30 @@ Additional details are contained in the *requirements.txt* file.
 
 ## Running our method
 
-### Parameters
+Our method can be simply run with the Python script *MMFP.py*:
 
+Example:
+
+``` 
+python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 53123865 --dest_node 53075311
+```
+
+### Parameters
+```
+--graph: Path to the input graph file (pickled, Networkx DiGraph)
+--orig_node: Source node 
+--dest_node: Destination node 
+--weight: Weight attribute in the graph (default: length)'
+--n_paths: Number of paths to sample (default: 100)
+--seed: Random seed (default: 1)'
+```
 ### Output
+
+1) A pickled file containing a Networkx DiGraph. The output graph corresponds to the DAG of forward paths from the source to the destination node. The DAG edge weights 'prob' and 'cond_prob' represent the absolute and conditioned transition probabilities corresponding to the Maxmin Fair Forward Path distribution. 
+
+2) A text file containing a list of n_paths (from the source node to the destination node) sampled from the Maxmin Fair distribution.
+
+
 
 ## Datasets
 
@@ -42,10 +63,18 @@ The dataset of the state of Florida and Eastern USA can be downloaded from: http
 ## Notebooks
 
 ## Competitors
+To run the competitors the following repositories should be downloaded, placing them at the same level of this repository.
 
-https://github.com/tchond/kspwlo/tree/master
+https://github.com/tchond/kspwlo/tree/master : to run ESX-C and OP+.
 
-https://github.com/AngelZihan/Diversified-Top-k-Route-Planning-in-Road-Network
+https://github.com/AngelZihan/Diversified-Top-k-Route-Planning-in-Road-Network : to run DKSP.
+
+Furthermore, Yen's algorithm can be run in Networkx (see https://networkx.org/documentation/networkx-2.4/reference/algorithms/generated/networkx.algorithms.simple_paths.shortest_simple_paths.html) with:
+```
+def k_shortest_paths(G, source, target, k, weight=None):
+    return list(islice(nx.shortest_simple_paths(G, source, target, weight=weight), k))
+```
+
 
 
 

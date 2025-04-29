@@ -7,7 +7,7 @@ import numpy as np
 from src import utils as ut
 
 # example:
-# python MMFP.py --graph Piedmont__California__USA.pkl --orig_node 53123865 --dest_node 53075311 
+# python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 53123865 --dest_node 53075311 
 
 def main():
     parser = argparse.ArgumentParser(description="Run LP solver and sample fair FPs on a DAG.")
@@ -22,11 +22,9 @@ def main():
 
     np.random.seed(args.seed)
 
-    # Load graph
     with open(args.graph, 'rb') as f:
         g = pickle.load(f)
 
-    # Extract graph name for filenames
     graph_name = os.path.splitext(os.path.basename(args.graph))[0]
 
     # Compute DAG and solve
@@ -42,11 +40,11 @@ def main():
     # Construct filename suffix
     suffix = f"_{graph_name}_orig{str(args.orig_node)}_dest{str(args.dest_node)}"
 
-    # Save final to a pickle file
+    # Save the DAG with the Maxmin Fair transition probabilities (in a pickle file)
     with open(f"results/LP_dag{suffix}.pkl", "wb") as f:
         pickle.dump(LP_dag, f)
 
-    # Save fair_fp as a list of lists in a text file
+    # Save a sample of the Maxmin Fair forward paths (in a text file)
     with open(f"results/paths{suffix}.txt", "w") as f:
         for path in fair_fp:
             f.write(str(path) + "\n")
