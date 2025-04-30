@@ -20,6 +20,8 @@ This repository contains the code to extracts the DAG of forward paths from a so
 
 - 📁 `Datasets/`: contains the datasets of the five cities (Piedmont, Essaoira, Florence, Buenos Aires and Kyoto) from Open Street Maps. 
 
+- 📁 `Results/`: folder to store the results from 📄 *MMFP.py*.
+
 
 
 
