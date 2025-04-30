@@ -1,12 +1,15 @@
 # Beyond Shortest Paths: Node Fairness in Route Recommendations
 
-<small>*Traditionally, route recommendation systems focused on minimizing distance (or time) for travelling between two points. However, recent attention has shifted to other factors beyond mere length. This paper addresses the challenge of ensuring a fair distribution of visits among network nodes when handling a high volume of point-to-point path queries. In doing so, we adopt a Rawlsian notion of individual-level fairness exploiting the power of randomness. Specifically, we aim to create a probabilistic distribution over paths that maximizes the minimum probability of any eligible node being included in the recommended path. A key idea of our work is the notion of forward paths, i.e., paths where traveling along any edge decreases the distance to the destination. In unweighted graphs forward paths and shortest paths coincide, but in weighted graphs forward paths provide a richer set of alternative routes, involving many more nodes while remaining close in length to the shortest path. Thus, they offer diversity and a wider basis for fairness. We devise an algorithm that extracts a directed acyclic graph (DAG) containing all the forward paths in the input graph, with the same computational runtime as solving a single shortest-path query. This avoids enumerating all possible forward paths, which can be exponential in the number of nodes. We then design a flow problem on this DAG to derive the probabilistic distribution over forward paths with the desired fairness property, solvable in polynomial time through a sequence of small linear programs. Our experiments on real-world datasets validate our theoretical results, demonstrating that our method provides individual node satisfaction while maintaining near-optimal path lengths. Moreover, our experiments show that our method can handle networks with millions nodes and edges on a commodity laptop and scales better than the baselines when there is a large volume of path queries for the same source and destination pair.*</small>
+[Antonio Ferrara](https://scholar.google.com/citations?user=v-tnmbwAAAAJ&hl=it) (CENTAI, Turin, Italy and TUGraz, Graz, Austria), [David Garcia Soriano](https://scholar.google.com/citations?hl=en&user=vBasOVoAAAAJ) (Universitat Politècnica de Catalunya
+and Serra Húnter Fellow, Barcelona, Spain), and [Francesco Bonchi](https://scholar.google.com/citations?user=R1Jt75cAAAAJ&hl=en) (CENTAI, Turin, Italy and Eurecat, Barcelona, Spain)
 
 ---
 
 ## Description
 
-This repository contains the code to extracts the DAG of forward paths from a source to a target node of a graph, to obtain the Maxmin-fair distribution over the forward paths and to sample paths from it.
+Repository of the paper "Beyond Shortest Paths: Node Fairness in Route Recommendationscontains, VLDB 2025, London, United Kingdom." (Link to be available soon) 
+
+The repository contains the code to extracts the DAG of forward paths from a source to a target node of a graph, to obtain the Maxmin-fair distribution over the forward paths and to sample paths from it.
 
 ## Project Structure
 
@@ -37,7 +40,7 @@ gurobipy 12.0.1
 Additional details are contained in the 📄 *requirements.txt* file.
 
 
-## Running our method
+## How to run
 
 Our method can be simply run with the Python script 📄 *MMFP.py*:
 
@@ -60,7 +63,7 @@ python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 531238
 
 📄 *MMFP.py* saves two files in the 📁 `Results/` folder:
 
-1) A pickled file containing a Networkx DiGraph. The output graph corresponds to the DAG of forward paths from the source to the destination node. The DAG edge weights 'prob' and 'cond_prob' represent the absolute and conditioned transition probabilities corresponding to the Maxmin Fair Forward Path distribution. 
+1) A pickle file containing a Networkx DiGraph. The output graph corresponds to the DAG of forward paths from the source to the destination node. The DAG edge weights 'prob' and 'cond_prob' represent the absolute and conditioned transition probabilities corresponding to the Maxmin Fair Forward Path distribution. 
 
 2) A text file containing a list of n_paths (from the source node to the destination node) sampled from the Maxmin Fair distribution.
 
@@ -78,7 +81,7 @@ The dataset from the DIMACS shortest path challenge of the state of Florida and 
 - 📄 *Paths draws.ipynb*: Draws the paths for our method and baselines methods on the DAG of forward paths for a source-target pair.
 - 📄 *Resources usage.ipynb*: Notebook to compute the runtime and memory allocation of the methods
 - 📄 *Save OSMnx datasets for MMFP.ipynb*: Retrieves and saves the datasets from Open Street Maps. 
-- 📄 *Toy example.ipynb*: A toy example on synthetic data to show the MMFP method
+- 📄 *Toy example.ipynb*: Toy example on synthetic data to show the MMFP method
 
 ## Competitors
 To run the competitors the following repositories should be downloaded, placing them at the same level of this repository:

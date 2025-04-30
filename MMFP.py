@@ -44,10 +44,15 @@ def main():
     with open(f"results/LP_dag{suffix}.pkl", "wb") as f:
         pickle.dump(LP_dag, f)
 
+    print(f"LP_dag{suffix}.pkl saved in the results folder")
+
     # Save a sample of the Maxmin Fair forward paths (in a text file)
     with open(f"results/paths{suffix}.txt", "w") as f:
         for path in fair_fp:
             f.write(str(path) + "\n")
+
+    print(f"paths{suffix}.txt saved in the results folder")
+
 
 if __name__ == '__main__':
     main()
