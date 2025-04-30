@@ -58,6 +58,8 @@ python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 531238
 ```
 ### Output
 
+📄 *MMFP.py* saves two files in the 📁 `Results/` folder:
+
 1) A pickled file containing a Networkx DiGraph. The output graph corresponds to the DAG of forward paths from the source to the destination node. The DAG edge weights 'prob' and 'cond_prob' represent the absolute and conditioned transition probabilities corresponding to the Maxmin Fair Forward Path distribution. 
 
 2) A text file containing a list of n_paths (from the source node to the destination node) sampled from the Maxmin Fair distribution.
@@ -68,7 +70,7 @@ python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 531238
 
 The datasets of the cities from Open Street Maps are in the 📁 `Datasets/` folder (they can also be retrieved with the notebook 📄 *Save OSMnx datasets for MMFP.ipynb*). 
 
-The dataset from the DIMACS shortest path challenge of the state of Florida and Eastern USA can be downloaded from: http://www.diag.uniroma1.it/challenge9/download.shtml
+The dataset from the DIMACS shortest path challenge of the state of Florida and Eastern USA can be downloaded from: http://www.diag.uniroma1.it/challenge9/download.shtml 
 
 ## Notebooks
 
