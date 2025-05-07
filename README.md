@@ -7,9 +7,9 @@ and Serra Húnter Fellow, Barcelona, Spain), and [Francesco Bonchi](https://www.
 
 ## Description
 
-Repository of the paper "Beyond Shortest Paths: Node Fairness in Route Recommendationscontains, 51st International Conference on Very Large Data BasesLondon (VLDB), United Kingdom, 2025" (Link to be available soon). 
+Repository of the paper "Beyond Shortest Paths: Node Fairness in Route Recommendations, 51st International Conference on Very Large Data Bases, London (VLDB), United Kingdom, 2025" (Link to be available soon). 
 
-The repository contains the code to extracts the Directed Acyclic Graph (DAG) of forward paths (paths in which each step along an edge brings a traveller closer to its destination) from a source to a destinantion node of a graph, to obtain the MaxMin-fair distribution over the Forward Paths (MMFP) and samples paths from it.
+The repository contains the code to extract the Directed Acyclic Graph (DAG) of forward paths (paths in which each step along an edge brings a traveller closer to its destination) from a source to a destination node of a graph, to obtain the MaxMin-fair distribution over the Forward Paths (MMFP) and sample paths from it.
 
 The goal is to produce paths from a source to a target node in a way that the nodes that are on reasonable paths (forward paths) are probabilistically fairly visited according to the MaxMin-fair principle following the Rawlsian notion of individual-level fairness.
 
@@ -19,7 +19,7 @@ The goal is to produce paths from a source to a target node in a way that the no
 
 - 📄 *requirements.txt*: contains Python libraries requirements
 
-- 📁 `src/`: folder containg the main functions in 📄 *utils.py*
+- 📁 `src/`: folder containing the main functions in 📄 *utils.py*
 
 - 📁 `Notebooks/`:  folder which contains Jupyter Notebooks to reproduce the results of our experimental evaluation
 
@@ -63,7 +63,7 @@ python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 531238
 ```
 ### Output
 
-📄 *MMFP.py* saves two files in the 📁 `Results/` folder:
+📄 *MMFP.py* saves two files in the 📁 `results/` folder:
 
 1) A pickle file containing a Networkx DiGraph. The output graph corresponds to the DAG of forward paths from the source to the destination node. The DAG edge weights 'prob' and 'cond_prob' represent the absolute and conditioned transition probabilities corresponding to the Maxmin Fair Forward Path distribution. 
 
@@ -82,7 +82,7 @@ The dataset from the DIMACS shortest path challenge of the state of Florida and 
 - 📄 *Lorenz Curves.ipynb*: Plots the generalized Lorenz curves for MMFP and competitors.
 - 📄 *MMFP and competitors.ipynb*: Computes the average length, runtime and gini coefficient for our method and baseline methods.
 - 📄 *MMFP path examples.ipynb*: Produces the DAG, the maxmin fair path distribution and examples of the paths for the city center of Florence, where a user needs to go from the Central Train Station to the Uffizi Gallery.
-- 📄 *Paths draws.ipynb*: Draws the paths for our method and baselines methods on the DAG of forward paths for a source-target pair.
+- 📄 *Paths draws.ipynb*: Draws the paths for our method and baseline methods on the DAG of forward paths for a source-target pair.
 - 📄 *Preprocess Dimacs datasets for MMFP.ipynb*: Process the datasets from DIMACS shortest path challenge, converting them into Networkx DiGraphs.
 - 📄 *Resources usage.ipynb*: Notebook to compute the runtime and memory allocation of the methods.
 - 📄 *Save OSMnx datasets for MMFP.ipynb*: Retrieves and saves the datasets from Open Street Maps. 
