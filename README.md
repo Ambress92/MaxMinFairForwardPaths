@@ -17,11 +17,11 @@ The goal is to produce paths from a source to a target node in a way that the no
 
 - 📄 *MMFP.py*: main end to end script to run our method. It creates the DAG of forward paths, the Maxmin-fair distribution and to sample paths from it.
 
-- 📄 *requirements.txt*: contains Python libraries requirements
+- 📄 *requirements.txt*: contains Python libraries requirements.
 
-- 📁 `src/`: folder containing the main functions in 📄 *utils.py*
+- 📁 `src/`: folder containing the main functions in 📄 *utils.py*.
 
-- 📁 `Notebooks/`:  folder which contains Jupyter Notebooks to reproduce the results of our experimental evaluation
+- 📁 `Notebooks/`:  folder which contains Jupyter Notebooks to reproduce the results of our experimental evaluation.
 
 - 📁 `Datasets/`: contains the datasets of the five cities (Piedmont, Essaoira, Florence, Buenos Aires and Kyoto) from Open Street Maps. 
 
