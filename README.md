@@ -9,7 +9,7 @@ and Serra Húnter Fellow, Barcelona, Spain), and [Francesco Bonchi](https://www.
 
 Repository of the paper "Beyond Shortest Paths: Node Fairness in Route Recommendations, 51st International Conference on Very Large Data Bases, London (VLDB), United Kingdom, 2025" (Link to be available soon). 
 
-The repository contains the code to extract the Directed Acyclic Graph (DAG) of forward paths (paths in which each step along an edge brings a traveller closer to its destination) from a source to a destination node of a graph, to obtain the MaxMin-fair distribution over the Forward Paths (MMFP) and sample paths from it.
+The repository contains the code to extract the Directed Acyclic Graph (DAG) of forward paths (paths in which each step along an edge brings a traveller closer to its destination) from a source to a destination node of a graph, to obtain the MaxMin-fair distribution over the Forward Paths (MMFP) and to sample paths from it.
 
 The goal is to produce paths from a source to a target node in a way that the nodes that are on reasonable paths (forward paths) are probabilistically fairly visited according to the MaxMin-fair principle following the Rawlsian notion of individual-level fairness.
 
