@@ -25,7 +25,7 @@ The goal is to produce paths from a source to a target node in a way that the no
 
 - 📁 `Datasets/`: contains the datasets of the five cities (Piedmont, Essaoira, Florence, Buenos Aires and Kyoto) from Open Street Maps. 
 
-- 📁 `Results/`: folder to store the results from 📄 *MMFP.py*.
+- 📁 `results/`: folder to store the results from 📄 *MMFP.py*.
 
 
 
@@ -55,8 +55,8 @@ python MMFP.py --graph Datasets/Piedmont__California__USA.pkl --orig_node 531238
 ### Parameters
 ```
 --graph: Path to the input graph file (pickled, Networkx DiGraph)
---orig_node: Source node 
---dest_node: Destination node 
+--orig_node: Source node ID
+--dest_node: Destination node ID
 --weight: Weight attribute in the graph (default: length)
 --n_paths: Number of paths to sample (default: 100)
 --seed: Random seed (default: 1)
@@ -79,14 +79,14 @@ The dataset from the DIMACS shortest path challenge of the state of Florida and 
 
 ## Notebooks
 
-- 📄 *Lorenz Curves.ipynb*: Plots the generalized Lorenz curves for MMFP and competitors
-- 📄 *MMFP and competitors.ipynb*: Computes the average length, runtime and gini coefficient for our method and baseline methods
+- 📄 *Lorenz Curves.ipynb*: Plots the generalized Lorenz curves for MMFP and competitors.
+- 📄 *MMFP and competitors.ipynb*: Computes the average length, runtime and gini coefficient for our method and baseline methods.
 - 📄 *MMFP path examples.ipynb*: Produces the DAG, the maxmin fair path distribution and examples of the paths for the city center of Florence, where a user needs to go from the Central Train Station to the Uffizi Gallery.
 - 📄 *Paths draws.ipynb*: Draws the paths for our method and baselines methods on the DAG of forward paths for a source-target pair.
-- 📄 *Preprocess Dimacs datasets for MMFP.ipynb*: Process the datasets from DIMACS shortest path challenge, converting them into Networkx DiGraphs
-- 📄 *Resources usage.ipynb*: Notebook to compute the runtime and memory allocation of the methods
+- 📄 *Preprocess Dimacs datasets for MMFP.ipynb*: Process the datasets from DIMACS shortest path challenge, converting them into Networkx DiGraphs.
+- 📄 *Resources usage.ipynb*: Notebook to compute the runtime and memory allocation of the methods.
 - 📄 *Save OSMnx datasets for MMFP.ipynb*: Retrieves and saves the datasets from Open Street Maps. 
-- 📄 *Toy example.ipynb*: Toy example on synthetic data to show the MMFP method
+- 📄 *Toy example.ipynb*: Toy example on synthetic data to show the MMFP method.
 
 ## Competitors
 To run the competitors the following repositories should be downloaded, placing them at the same level of this repository:
