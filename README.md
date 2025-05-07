@@ -15,7 +15,7 @@ The goal is to produce paths from a source to a target node in a way that the no
 
 ## Project Structure
 
-- 📄 *MMFP.py*: main end to end script to run our method. It creates the DAG of forward paths, the Maxmin-fair distribution and to sample paths from it.
+- 📄 *MMFP.py*: main end to end script to run our method. It creates the DAG of forward paths, the Maxmin-fair distribution and samples paths from it.
 
 - 📄 *requirements.txt*: contains Python libraries requirements.
 
